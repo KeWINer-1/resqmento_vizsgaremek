@@ -1,0 +1,94 @@
+﻿<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="ResQ" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+    <title>resq - Adataim</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="src/favicon.ico" />
+    <link rel="stylesheet" href="css/styles.css?v=20260404-2" />
+  </head>
+  <body class="app-theme">
+    <header>
+      <a class="brand" href="/map">
+        <img src="src/logo.png" alt="resq logo" />
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links">
+        <a href="/rolunk">Rólunk</a>
+        <a href="/map">Térkép</a>
+        <a href="/provider" data-provider-link>Autómentő mód</a>
+        <a href="/support" data-support-link>Ügyfélszolgálat</a>
+        <a href="/auth" data-auth-link>Belépés</a>
+      </nav>
+    </header>
+
+    <section class="section account-section">
+      <div class="account-layout">
+        <div class="form-card account-main-card">
+        <h2>Adataim</h2>
+        <div id="account-alert" class="alert-box" style="display: none;"></div>
+        <p class="notice" id="account-message"></p>
+
+        <div id="account-details" style="display: none;">
+          <label>Nev</label>
+          <input id="account-name" type="text" disabled />
+
+          <label>Email</label>
+          <input id="account-email" type="text" disabled />
+
+          <label>Telefonszam</label>
+          <input id="account-phone" type="text" inputmode="tel" pattern="^\+?\d+$" disabled />
+
+          <label>Fiók típusa</label>
+          <input id="account-role" type="text" disabled />
+
+          <div class="cta-row" style="margin-top: 18px;">
+            <button class="btn" id="account-edit" type="button">Adataim szerkesztese</button>
+            <button class="btn" id="account-save" type="button" style="display: none;">Mentés</button>
+            <button class="btn secondary" id="account-cancel" type="button" style="display: none;">Megse</button>
+            <button class="btn secondary" id="logout-btn" type="button">Kijelentkezes</button>
+          </div>
+        </div>
+
+        <div id="admin-profile" style="display: none;">
+          <label>Email</label>
+          <input id="admin-email" type="text" disabled />
+
+          <label>Szerepkor</label>
+          <input id="admin-role" type="text" disabled />
+
+          <div class="cta-row" style="margin-top: 18px;">
+            <button class="btn secondary" id="admin-logout-btn" type="button">Kijelentkezes</button>
+          </div>
+        </div>
+        </div>
+
+        <aside class="form-card account-history-card" id="account-history-card" style="display: none;">
+          <h2>Előzmény</h2>
+          <p class="notice" id="account-history-summary">Betöltés...</p>
+          <div class="account-history-list" id="account-history-list"></div>
+        </aside>
+      </div>
+    </section>
+
+    <script src="js/common.js?v=20260404-2"></script>
+    <script src="js/account.js?v=20260404-2"></script>
+  </body>
+</html>
+
