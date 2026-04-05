@@ -1,0 +1,72 @@
+﻿<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="ResQ" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+    <title>resq - Értékelések</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="src/favicon.ico" />
+    <link rel="stylesheet" href="css/styles.css?v=20260404-2" />
+  </head>
+  <body class="app-theme">
+    <header>
+      <a class="brand" href="/map">
+        <img src="src/logo.png" alt="resq logo" />
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links">
+        <a href="/map">Térkép</a>
+        <a href="/automento" data-provider-link>Autómentő mód</a>
+        <a href="/support" data-support-link>Ügyfélszolgálat</a>
+        <a href="/rolunk">Rólunk</a>
+        <a href="/auth" data-auth-link>Belépés</a>
+      </nav>
+    </header>
+
+    <main class="section">
+      <div class="form-card" style="max-width: 900px;">
+      <h2>Értékelések</h2>
+        <p class="notice" id="ratings-message"></p>
+
+        <div class="card ratings-summary" id="ratings-summary" style="margin-top: 8px;">
+          <div>
+            <div class="notice">Atlag</div>
+            <div class="avg-stars-row">
+              <div class="avg-stars" aria-hidden="true">
+                <span class="avg-stars-base">★★★★★</span>
+                <span class="avg-stars-fill" id="avg-stars-fill">★★★★★</span>
+              </div>
+              <span class="avg-stars-value" id="avg-stars-value">-</span>
+            </div>
+          </div>
+          <div>
+          <div class="notice">Összes értékelés</div>
+            <div class="ratings-count" id="ratings-count">0 db</div>
+          </div>
+        </div>
+
+        <div id="ratings-list" class="ratings-list" style="margin-top: 14px;"></div>
+      </div>
+    </main>
+
+    <script src="js/common.js?v=20260404-2"></script>
+    <script src="js/ertekelesek.js?v=20260404-2"></script>
+  </body>
+</html>
+
+
